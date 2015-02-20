@@ -1,6 +1,6 @@
-# admiral.js
+# Admiral.js
 
- [![Build Status](https://api.travis-ci.org/viracore/admiral.js.svg)](http://travis-ci.org/tj/admiral.js)
+ [![Build Status](https://api.travis-ci.org/viracore/admiral.js.svg)](http://travis-ci.org/viracore/admiral.js)
 [![NPM Version](http://img.shields.io/npm/v/admiral.svg?style=flat)](https://www.npmjs.org/package/admiral)
 [![NPM Downloads](https://img.shields.io/npm/dm/admiral.svg?style=flat)](https://www.npmjs.org/package/admiral)
 
