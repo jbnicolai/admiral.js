@@ -1,20 +1,20 @@
 # admiral.js
 
- [![Build Status](https://api.travis-ci.org/tj/admiral.js.svg)](http://travis-ci.org/tj/admiral.js)
-[![NPM Version](http://img.shields.io/npm/v/commander.svg?style=flat)](https://www.npmjs.org/package/commander)
-[![NPM Downloads](https://img.shields.io/npm/dm/commander.svg?style=flat)](https://www.npmjs.org/package/commander)
+ [![Build Status](https://api.travis-ci.org/viracore/admiral.js.svg)](http://travis-ci.org/tj/admiral.js)
+[![NPM Version](http://img.shields.io/npm/v/admiral.svg?style=flat)](https://www.npmjs.org/package/admiral)
+[![NPM Downloads](https://img.shields.io/npm/dm/admiral.svg?style=flat)](https://www.npmjs.org/package/admiral)
 
   The complete solution for [node.js](http://nodejs.org) command-line interfaces, based on TJ Holowaychuk's [Commander.js](https://github.com/tj/commander.js), inspired by Ruby's [commander](https://github.com/tj/commander).
-  [API documentation](http://tj.github.com/admiral.js/)
+  [API documentation](http://viracore.github.com/admiral.js/)
 
 
 ## Installation
 
-    $ npm install commander
+    $ npm install admiral
 
 ## Option parsing
 
- Options with commander are defined with the `.option()` method, also serving as documentation for the options. The example below parses args and options from `process.argv`, leaving remaining args as the `program.args` array which were not consumed by options.
+ Options with admiral are defined with the `.option()` method, also serving as documentation for the options. The example below parses args and options from `process.argv`, leaving remaining args as the `program.args` array which were not consumed by options.
 
 ```js
 #!/usr/bin/env node
@@ -110,7 +110,7 @@ console.log(' drink: %j', program.drink);
  * Module dependencies.
  */
 
-var program = require('commander');
+var program = require('admiral');
 
 program
   .version('0.0.1')
@@ -149,7 +149,7 @@ The commander will try to find the executable script in __current directory__ wi
 
 ## Automated --help
 
- The help information is auto-generated based on the information commander already knows about your program, so the following `--help` info is for free:
+ The help information is auto-generated based on the information admiral already knows about your program, so the following `--help` info is for free:
 
 ```
  $ ./examples/pizza --help
@@ -173,7 +173,7 @@ The commander will try to find the executable script in __current directory__ wi
 ## Custom help
 
  You can display arbitrary `-h, --help` information
- by listening for "--help". Commander will automatically
+ by listening for "--help". Admiral will automatically
  exit once you are done so that the remainder of your program
  does not execute causing undesired behaviours, for example
  in the following executable "stuff" will not output when
@@ -186,7 +186,7 @@ The commander will try to find the executable script in __current directory__ wi
  * Module dependencies.
  */
 
-var program = require('commander');
+var program = require('admiral');
 
 program
   .version('0.0.1')
@@ -238,7 +238,7 @@ Output help information without exiting.
 If you want to display help by default (e.g. if no command was provided), you can use something like:
 
 ```js
-var program = require('commander');
+var program = require('admiral');
 
 program
   .version('0.0.1')
@@ -257,7 +257,7 @@ program
 ## Examples
 
 ```js
-var program = require('commander');
+var program = require('admiral');
 
 program
   .version('0.0.1')
