@@ -1,11 +1,11 @@
-# Commander.js
+# admiral.js
 
- [![Build Status](https://api.travis-ci.org/tj/commander.js.svg)](http://travis-ci.org/tj/commander.js)
+ [![Build Status](https://api.travis-ci.org/tj/admiral.js.svg)](http://travis-ci.org/tj/admiral.js)
 [![NPM Version](http://img.shields.io/npm/v/commander.svg?style=flat)](https://www.npmjs.org/package/commander)
 [![NPM Downloads](https://img.shields.io/npm/dm/commander.svg?style=flat)](https://www.npmjs.org/package/commander)
 
-  The complete solution for [node.js](http://nodejs.org) command-line interfaces, inspired by Ruby's [commander](https://github.com/tj/commander).  
-  [API documentation](http://tj.github.com/commander.js/)
+  The complete solution for [node.js](http://nodejs.org) command-line interfaces, based on TJ Holowaychuk's [Commander.js](https://github.com/tj/commander.js), inspired by Ruby's [commander](https://github.com/tj/commander).
+  [API documentation](http://tj.github.com/admiral.js/)
 
 
 ## Installation
@@ -23,7 +23,7 @@
  * Module dependencies.
  */
 
-var program = require('commander');
+var program = require('admiral');
 
 program
   .version('0.0.1')
@@ -93,7 +93,7 @@ program
   .option('-s --size <size>', 'Pizza size', /^(large|medium|small)$/i, 'medium')
   .option('-d --drink [drink]', 'Drink', /^(coke|pepsi|izze)$/i)
   .parse(process.argv);
-  
+
 console.log(' size: %j', program.size);
 console.log(' drink: %j', program.drink);
 ```
@@ -144,14 +144,14 @@ program
   .parse(process.argv);
 ```
 
-When `.command()` is invoked with a description argument, no `.action(callback)` should be called to handle sub-commands, otherwise there will be an error. This tells commander that you're going to use separate executables for sub-commands, much like `git(1)` and other popular tools.  
+When `.command()` is invoked with a description argument, no `.action(callback)` should be called to handle sub-commands, otherwise there will be an error. This tells commander that you're going to use separate executables for sub-commands, much like `git(1)` and other popular tools.
 The commander will try to find the executable script in __current directory__ with the name `scriptBasename-subcommand`, like `pm-install`, `pm-search`.
 
 ## Automated --help
 
  The help information is auto-generated based on the information commander already knows about your program, so the following `--help` info is for free:
 
-```  
+```
  $ ./examples/pizza --help
 
    Usage: pizza [options]
@@ -299,7 +299,7 @@ program
 program.parse(process.argv);
 ```
 
-You can see more Demos in the [examples](https://github.com/tj/commander.js/tree/master/examples) directory.
+You can see more Demos in the [examples](https://github.com/viracore/admiral.js/tree/master/examples) directory.
 
 ## License
 
