@@ -9,7 +9,7 @@ var path = require('path');
 var dirname = path.dirname;
 var basename = path.basename;
 var fs = require('fs');
-
+var chalk = require('chalk');
 /**
  * Expose the root command.
  */
@@ -821,8 +821,8 @@ Command.prototype.usage = function(str) {
     return humanReadableArgName(arg);
   });
 
-  var usage = '[options]'
-    + (this.commands.length ? ' [command]' : '')
+  var usage = chalk.blue('[options]')
+    + (this.commands.length ? chalk.blue(' [command]') : '')
     + (this._args.length ? ' ' + args.join(' ') : '');
 
   if (0 == arguments.length) return this._usage || usage;
@@ -890,12 +890,12 @@ Command.prototype.commandHelp = function() {
     }).join(' ');
 
     return [
-      cmd._name
+      chalk.cyan(cmd._name)
         + (cmd._alias
           ? '|' + cmd._alias
           : '')
         + (cmd.options.length
-          ? ' [options]'
+          ? chalk.blue(' [options]')
           : '')
         + ' ' + args
     , cmd.description()
@@ -908,7 +908,7 @@ Command.prototype.commandHelp = function() {
 
   return [
       ''
-    , '  Commands:'
+    , chalk.green('  Commands:')
     , ''
     , commands.map(function(cmd) {
       return pad(cmd[0], width) + '  ' + cmd[1];
@@ -939,7 +939,7 @@ Command.prototype.helpInformation = function() {
   }
   var usage = [
     ''
-    ,'  Usage: ' + cmdName + ' ' + this.usage()
+    , chalk.green('  Usage: ') + chalk.cyan(cmdName) + ' ' + this.usage()
     , ''
   ];
 
@@ -948,7 +948,7 @@ Command.prototype.helpInformation = function() {
   if (commandHelp) cmds = [commandHelp];
 
   var options = [
-    '  Options:'
+    chalk.green('  Options:')
     , ''
     , '' + this.optionHelp().replace(/^/gm, '    ')
     , ''
@@ -1042,6 +1042,6 @@ function humanReadableArgName(arg) {
   var nameOutput = arg.name + (arg.variadic === true ? '...' : '');
 
   return arg.required
-    ? '<' + nameOutput + '>'
-    : '[' + nameOutput + ']'
+    ? chalk.red('<' + nameOutput + '>')
+    : chalk.blue('[' + nameOutput + ']')
 }

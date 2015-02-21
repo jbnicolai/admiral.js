@@ -1,15 +1,44 @@
 {
-    "name": "admiral"
-  , "version": "2.6.1"
-  , "description": "the complete solution for node.js command-line programs based on commander.js"
-  , "keywords": ["command", "option", "parser"]
-  , "author": "TJ Holowaychuk <tj@vision-media.ca>"
-  , "contributors": ["Viracore <support@viracore.com>"]
-  , "license": "MIT"
-  , "repository": { "type": "git", "url": "https://github.com/viracore/admiral.js.git" }
-  , "devDependencies": { "should": ">= 0.0.1" }
-  , "scripts": { "test": "make test" }
-  , "main": "index"
-  , "engines": { "node": ">= 0.6.x" }
-  , "files": ["index.js"]
+  "name": "admiral",
+  "version": "2.6.2",
+  "description": "the complete solution for node.js command-line programs based on commander.js",
+  "keywords": [
+    "command",
+    "option",
+    "parser"
+  ],
+  "author": {
+    "name": "TJ Holowaychuk",
+    "email": "<tj@vision-media.ca>"
+  },
+  "contributors": [{
+    "name": "Viracore",
+    "email": "<support@viracore.com>",
+    "homepage": "https://www.viracore.com"
+  }, {
+    "name": "Josh Manders",
+    "email": "josh@joshmanders.com",
+    "homepage": "https://certifiedweb.ninja"
+  }],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/viracore/admiral.js.git"
+  },
+  "devDependencies": {
+    "should": ">= 0.0.1"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "main": "index",
+  "engines": {
+    "node": ">= 0.6.x"
+  },
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "chalk": "^0.5.1"
+  }
 }

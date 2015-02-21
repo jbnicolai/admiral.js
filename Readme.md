@@ -7,6 +7,9 @@
   The complete solution for [node.js](http://nodejs.org) command-line interfaces, based on TJ Holowaychuk's [Commander.js](https://github.com/tj/commander.js), inspired by Ruby's [commander](https://github.com/tj/commander).
   [API documentation](http://viracore.github.com/admiral.js/)
 
+  The biggest difference right now between `commander.js` and `admiral.js` is
+  the introduction of colors to the application.
+
 
 ## Installation
 
