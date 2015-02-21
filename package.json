@@ -33,7 +33,7 @@
   },
   "main": "index",
   "engines": {
-    "node": ">= 0.6.x"
+    "node": ">= 0.10.x"
   },
   "files": [
     "index.js"
